@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Component</title>
+    <!-- =========Style Css================ -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ==========Google Fonts========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Our Pricing</h1>
+        <div class="content">
+          <span>Annually</span>
+          <div class="bal-box">
+            <div class="bal" id="bal"></div>
+          </div>
+          <span>Monthly</span>
+        </div>
+      </div>
+      <div class="card-list">
+        <div class="card">
+          <h3>Basic</h3>
+          <div class="simvol">&dollar;<span class="price one js">199.99</span> <span class="hide price two">19.99</span></div>
+          <div class="line"></div>
+          <span>500 GB Storage</span>
+          <div class="line"></div>
+          <span>2 Users Allowed</span>
+          <div class="line"></div>
+          <span>Send up to 3 GB</span>
+          <div class="line"></div>
+          <button class="learn-btn">Learn More</button>
+        </div>
+        <div class="card active">
+          <h3>Professional</h3>
+          <div class="simvol">&dollar;<span class="price card-two js">249.99</span><span class="price hide two">24.99</span></div>
+          <div class="line"></div>
+          <span>1 TB Storage</span>
+          <div class="line"></div>
+          <span>5 Users Allowed</span>
+          <div class="line"></div>
+          <span>Send up to 10 GB</span>
+          <div class="line"></div>
+          <button class="learn-btn">Learn More</button>
+        </div>
+        <div class="card">
+          <h3>Master</h3>
+          <div class="simvol">&dollar;<span class="price card-three js">399.99</span><span class="hide two price">39.99</span></div>
+          <div class="line"></div>
+          <span>500 GB Storage</span>
+          <div class="line"></div>
+          <span>2 Users Allowed</span>
+          <div class="line"></div>
+          <span>Send up to 3 GB</span>
+          <div class="line"></div>
+          <button class="learn-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".bal-box").addEventListener("click", () => {
+        document.querySelector(".bal").classList.toggle('left')
+        document.querySelectorAll('.two').forEach(Element=>{
+          Element.classList.toggle('hide')
+        })
+        document.querySelectorAll('.js').forEach(Elem=>{
+          Elem.classList.toggle('hide')
+        })
+        
+      });
+    </script>
+  </body>
+</html>
